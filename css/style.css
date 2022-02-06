@@ -1,0 +1,589 @@
+/* Special rules for printing */
+
+@media print {
+  /* Hide elements for print */
+
+  header {
+    display: none;
+  }
+
+  /* Page breaks for print */
+
+  main {
+    page-break-after: always;
+  }
+
+  section {
+    page-break-after: always;
+  }
+}
+
+/* || General styles / Desktop styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: sans-serif;
+  background: #e0e0e0;
+}
+
+body {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background: center url("../img/sky_image.jpg") #8d8d8d;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+header,
+footer {
+  background-color: #262626;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+q {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+/* || Specific styles */
+
+/* || Typography */
+
+h1 {
+  margin-bottom: 5rem;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+footer p {
+  padding: 1rem;
+}
+
+/* || Header and nav */
+
+header img {
+  display: block;
+  margin: 0 auto;
+  object-fit: none;
+  height: 6rem;
+  width: 100%;
+}
+
+nav {
+  margin: 0 auto;
+  display: table;
+}
+
+nav a:link,
+nav a:visited {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem;
+}
+
+nav a:hover {
+  background-color: #d6d6d6;
+  color: #262626;
+}
+
+nav a:active {
+  background-color: #fff;
+  color: #262626;
+}
+
+/* || Index page */
+
+/* || Intro Section */
+
+.intro {
+  margin: 10rem auto;
+  max-width: 30rem;
+}
+
+/* || Review Section */
+
+.customer-reviews {
+  font-size: 1.1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.customer-reviews ul {
+  background-color: #8d8d8d80;
+  padding-bottom: 1rem;
+}
+
+.customer-reviews li {
+  display: inline-block;
+  max-width: 15rem;
+}
+
+.customer-reviews q {
+  display: block;
+  padding: 1.2rem;
+}
+
+.customer-reviews img {
+  height: 10rem;
+  width: 10rem;
+  margin-top: 1rem;
+  border-radius: 5rem;
+}
+
+.reviewer-company {
+  font-style: italic;
+  font-size: 0.8rem;
+  padding: 0;
+}
+
+/* Contact page */
+
+.contact-page {
+  background-color: #6b6b6b;
+}
+
+.contact-page a:link,
+.contact-page a:visited {
+  color: #63aae0;
+}
+
+.contact-intro {
+  margin: 0 auto;
+  padding: 20rem 5rem 5rem;
+  background: center url("../img/angry_customer.jpg") #6b6b6b;
+  background-size: cover;
+  background-blend-mode: multiply;
+  max-width: fit-content;
+}
+
+.contact-intro h1 {
+  margin-bottom: 0;
+}
+
+.contact-infobox {
+  background-color: rgba(11 85 11 / 16.4%);
+}
+
+.contact-infobox ul {
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  max-width: fit-content;
+}
+
+.contact-infobox li {
+  list-style: none;
+}
+
+.contact-infobox p {
+  text-align: left;
+  padding: 0.5rem;
+}
+
+.tel {
+  display: inline-block;
+  width: 5rem;
+}
+
+.email {
+  display: inline-block;
+  width: 5rem;
+}
+
+.user-browser {
+  margin: 0 auto;
+  background-color: #262626;
+  width: 20rem;
+}
+
+/* GRID - employees/ourfleet */
+
+.image-gallery {
+  margin: 0 auto;
+  width: 900px;
+  padding: 10rem 0;
+}
+
+.image-grid-container {
+  background: #6b6b6b;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 10rem 10rem;
+  gap: 1rem;
+}
+
+.employee,
+.plane,
+.employee-enlarged,
+.plane-enlarged {
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.employee p,
+.plane p,
+.employee-enlarged p,
+.plane-enlarged p {
+  background-color: #262626c5;
+  flex-grow: 1;
+  pointer-events: none;
+}
+
+.employee:hover,
+.plane:hover {
+  opacity: 0.7;
+}
+
+.gallery-heading {
+  display: none;
+}
+
+/* Employees page */
+
+.employee-1 {
+  background: center url("../img/employee1_compressed.jpg");
+  background-size: cover;
+}
+
+.employee-2 {
+  background: center url("../img/employee2_compressed.jpg");
+  background-size: cover;
+}
+
+.employee-3 {
+  background: center url("../img/employee3_compressed.jpg");
+  background-size: cover;
+}
+
+.employee-4 {
+  background: center url("../img/employee4_compressed.jpg");
+  background-size: cover;
+}
+
+.employee-enlarged {
+  grid-column: 3 / 5;
+  grid-row: 1 / 3;
+  cursor: zoom-in;
+}
+
+/* Ourfleet page */
+
+.plane-1 {
+  background: 80% url("../img/plane1_compressed.jpg");
+  background-size: cover;
+}
+
+.plane-2 {
+  background: center url("../img/plane2_compressed.jpg");
+  background-size: cover;
+}
+
+.plane-3 {
+  background: 30% url("../img/plane3_compressed.jpg");
+  background-size: cover;
+}
+
+.plane-4 {
+  background: 80% url("../img/plane4_compressed.jpg");
+  background-size: cover;
+}
+
+.plane-enlarged {
+  grid-column: 3 / 5;
+  grid-row: 1 / 3;
+  cursor: zoom-in;
+}
+
+/* GRID - Booking page */
+
+.booking-window {
+  margin: 0 auto;
+  width: 650px;
+  padding: 5rem 0;
+  display: flex;
+}
+
+.booking-table-gridcontainer {
+  background: #6b6b6b;
+  padding: 1rem 2rem;
+  display: grid;
+  width: 40%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 0.5rem;
+}
+
+.booking-table-item {
+  background: rgb(35 100 35 / 44.5%);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.booking-form-gridcontainer {
+  background: #615353;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  width: 60%;
+  justify-items: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.booking-form-gridcontainer label {
+  font-weight: bold;
+}
+
+.form-field {
+  align-self: stretch;
+  font-size: 1rem;
+}
+
+#reset-button {
+  align-self: center;
+  justify-self: center;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
+}
+
+#book-button {
+  align-self: center;
+  justify-self: center;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
+}
+
+.booking-table-item:hover,
+#reset-button:hover,
+#book-button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.booking-heading {
+  display: none;
+}
+
+/* Booking page interactivity */
+
+.active {
+  background: rgb(0 0 255 / 70%);
+}
+
+.booked {
+  background: rgb(255 0 0 / 70%);
+}
+
+.booked:hover {
+  cursor: zoom-in;
+  opacity: 1;
+}
+
+/* || Footer */
+
+footer {
+  color: #fff;
+  font-size: 0.7rem;
+  margin-top: auto;
+}
+
+.copyright {
+  font-style: italic;
+}
+
+/* || Breakpoints for smaller screens */
+
+/* || Small devices - Phone */
+
+@media only screen and (max-width: 480px) {
+  /* || Mobile Nav */
+
+  nav {
+    padding-bottom: 1rem;
+  }
+
+  nav a:link,
+  nav a:visited {
+    text-align: center;
+    display: block;
+    padding: 0.2rem 1rem;
+    margin: 0.2rem;
+    font-size: 1rem;
+    background-color: #d6d6d6;
+    color: #262626;
+  }
+
+  nav a:active {
+    background-color: #fff;
+    color: #262626;
+  }
+
+  /* || Small changes */
+
+  .intro {
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  .customer-reviews li {
+    margin-bottom: 1rem;
+    background-color: #8d8d8d3a;
+  }
+
+  .reviewer-company {
+    padding-bottom: 1rem;
+  }
+
+  /* Contactbox infobox color */
+
+  .contact-infobox {
+    background-color: rgba(255 0 0 / 27.4%);
+  }
+
+  .user-browser {
+    width: auto;
+  }
+
+  /* Employees and Planes gallery */
+
+  .image-gallery {
+    width: 360px;
+    padding: 0;
+  }
+
+  .image-grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20rem 10rem 10rem;
+    gap: 0;
+  }
+
+  .employee-enlarged,
+  .plane-enlarged {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    cursor: zoom-in;
+  }
+
+  .employee-enlarged p,
+  .plane-enlarged p {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+
+  /* Booking page */
+
+  .booking-window {
+    width: 360px;
+    flex-direction: column-reverse;
+  }
+
+  .booking-table-gridcontainer {
+    width: 100%;
+    min-height: 378px;
+  }
+
+  .booking-form-gridcontainer {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* || Medium device - Phone/Tablet */
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  /* || Mobile Nav */
+
+  nav {
+    padding-bottom: 1rem;
+  }
+
+  nav a:link,
+  nav a:visited {
+    text-align: center;
+    display: block;
+    padding: 0.2rem 1rem;
+    margin: 0.2rem;
+    font-size: 1rem;
+    background-color: #d6d6d6;
+    color: #262626;
+  }
+
+  nav a:active {
+    background-color: #fff;
+    color: #262626;
+  }
+
+  /* Contactbox infobox color */
+
+  .contact-infobox {
+    background-color: rgba(0 0 255 / 8.9%);
+  }
+
+  /* Employees and Planes gallery */
+
+  .image-gallery {
+    width: 360px;
+    padding: 0;
+  }
+
+  .image-grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20rem 10rem 10rem;
+    gap: 0;
+  }
+
+  .employee-enlarged,
+  .plane-enlarged {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    cursor: zoom-in;
+  }
+
+  .employee-enlarged,
+  .plane-enlarged p {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  /* Booking page */
+
+  .booking-window {
+    width: 360px;
+    flex-direction: column-reverse;
+  }
+
+  .booking-table-gridcontainer {
+    width: 100%;
+    min-height: 378px;
+  }
+
+  .booking-form-gridcontainer {
+    width: 100%;
+    justify-content: center;
+  }
+}

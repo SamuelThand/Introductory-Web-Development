@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<!-- 
+Samuel Thand
+sath2102
+sath2102@student.miun.se
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Bokning</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="img/logo.png" alt="Luftbombarna logotype"/>
+      <p>Vi förflyttar dig - <strong>med kraft</strong></p>
+      <nav>
+        <a href="index.html">Hem</a>
+        <a href="booking.html">Bokning</a>
+        <a href="contact.html">Kontakt</a>
+        <a href="employees.html">Anställda</a>
+        <a href="ourfleet.html">Våra flygplan</a>
+      </nav>
+    </header>
+    <main>
+      <section class="booking-window">
+        <h1 class="booking-heading">Booking window</h1>
+        <form class="booking-form-gridcontainer">
+          <label for="first-name">Förnamn</label>
+            <input type="text" class="form-field" id="first-name" required>
+          <label for="last-name">Efternamn</label>
+            <input type="text" class="form-field" id="last-name" required>
+          <label for="personal-id">Personnummer</label>
+            <input type="text" class="form-field" id="personal-id" required>
+          <label>Klass</label>
+            <p class="form-field" id="service-class">aaaaaaa</p>
+          <label>Platsnummer</label>
+            <p class="form-field" id="seat-number">aaaaaaa</p>
+          <input type="reset" id="reset-button">
+          <button type="button" id="book-button">Boka</button>
+        </form>
+        <section class="booking-table-gridcontainer">
+          <h2 class="booking-heading">Booking table</h2>
+          <div class="booking-table-item row-1 col-1"></div>
+          <div class="booking-table-item row-1 col-2"></div>
+          <div class="booking-table-item row-1 col-3"></div>
+          <div class="booking-table-item row-2 col-1"></div>
+          <div class="booking-table-item row-2 col-2"></div>
+          <div class="booking-table-item row-2 col-3"></div>
+          <div class="booking-table-item row-3 col-1"></div>
+          <div class="booking-table-item row-3 col-2"></div>
+          <div class="booking-table-item row-3 col-3"></div>
+          <div class="booking-table-item row-4 col-1"></div>
+          <div class="booking-table-item row-4 col-2"></div>
+          <div class="booking-table-item row-4 col-3"></div>
+          <div class="booking-table-item row-5 col-1"></div>
+          <div class="booking-table-item row-5 col-2"></div>
+          <div class="booking-table-item row-5 col-3"></div>
+          <div class="booking-table-item row-6 col-1"></div>
+          <div class="booking-table-item row-6 col-2"></div>
+          <div class="booking-table-item row-6 col-3"></div>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <p>
+        Luftbombarna är ett flygbolag som specialiserar sig på specialchartrade
+        resor med militärflyg och ovanliga flygfarkoster.
+      </p>
+      <p>
+        Vi har erfarna piloter och personal med många års erfarenhet av turism,
+        krig och service.
+      </p>
+      <p class="copyright">&copy; LUFTBOMBARNA</p>
+    </footer>
+  </body>
+</html>
